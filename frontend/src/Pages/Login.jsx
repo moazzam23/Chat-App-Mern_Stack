@@ -53,10 +53,8 @@ const Login = () => {
       >
         {isLogin ? (
           <>
-            {" "}
             <Typography textAlign={"center"} variant="h5">
-              {" "}
-              Login{" "}
+              Login
             </Typography>
             <form
               onSubmit={handlelogin}
@@ -92,8 +90,7 @@ const Login = () => {
                 sx={{ marginTop: "1rem" }}
                 type="submit"
               >
-                {" "}
-                Login{" "}
+                Login
               </Button>
               <Typography textAlign={"center"} m={"1rem"}>
                 Or
@@ -103,17 +100,14 @@ const Login = () => {
                 fullWidth
                 onClick={() => setIsLogin(false)}
               >
-                {" "}
-                Sign Up{" "}
+                Sign Up
               </Button>
             </form>
           </>
         ) : (
           <>
-            {" "}
             <Typography textAlign={"center"} variant="h5">
-              {" "}
-              Register{" "}
+              Register
             </Typography>
             <form
               onSubmit={handleregister}
@@ -212,15 +206,13 @@ const Login = () => {
                 sx={{ marginTop: "1rem" }}
                 type="submit"
               >
-                {" "}
-                Register{" "}
+                Register
               </Button>
               <Typography textAlign={"center"} m={"1rem"}>
                 Or
               </Typography>
               <Button variant="text" fullWidth onClick={() => setIsLogin(true)}>
-                {" "}
-                Login{" "}
+                Login
               </Button>
             </form>
           </>
