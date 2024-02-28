@@ -1,6 +1,7 @@
 import { Add, Remove } from "@mui/icons-material";
 import { Avatar, IconButton, ListItem, Stack, Typography } from "@mui/material";
 import React, { memo } from "react";
+import { ImageTransformation } from "../../Lib/Feature";
 
 const Searchlistitem = ({ user, handler, isLoading ,isAdded=false }) => {
   const { name, avatar, _id } = user;
@@ -12,7 +13,7 @@ const Searchlistitem = ({ user, handler, isLoading ,isAdded=false }) => {
         spacing={"1rem"}
         alignItems={"center"}
       >
-        <Avatar src={avatar} alt="pic" />
+        <Avatar src={ImageTransformation(avatar)} alt="pic" />
         <Typography
           variant="body1"
           sx={{

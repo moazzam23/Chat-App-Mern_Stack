@@ -5,8 +5,16 @@ import { Grey, Orange } from "../Components/Constant/Colors";
 import { AttachFile, Send } from "@mui/icons-material";
 import { InputBox } from "../Style/Stylecomponent";
 import FileMenu from "../Components/Specific/FileMenu";
+import { samplemessage } from "../Components/Constant/Sampledata";
+import MessageCpmponent from "../Components/Shared/MessageCpmponent";
 
 const Chat = () => {
+
+  const user = {
+    _id:"skafhkasjf",
+    name:"moazzzam"
+  }
+
   const containerRef = useRef(null);
   return (
     <>
@@ -21,7 +29,16 @@ const Chat = () => {
           overflowX: "hidden",
           overflowY: "auto",
         }}
-      ></Stack>
+      >
+
+{
+  samplemessage.map((item) => (
+     <MessageCpmponent  message={item} key={item._id}  user={user} />
+  )
+  )
+}
+
+      </Stack>
       <form style={{ height: "10%" }}>
         <Stack
           direction={"row"}
@@ -33,7 +50,7 @@ const Chat = () => {
           <IconButton 
           sx={{
             position:"absolute",
-            left:"1.5rem",
+            left:"0.5rem",
             rotate:"30deg"
 
           }}>
@@ -59,7 +76,7 @@ sx={{
         </Stack>
 
       </form>
-<FileMenu anchor={""}/>
+<FileMenu />
     </>
   );
 };
