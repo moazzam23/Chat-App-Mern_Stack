@@ -4,7 +4,7 @@ export const sampledata = [
       "https://img.freepik.com/premium-vector/young-smiling-man-avatar-man-with-brown-beard-mustache-hair-wearing-yellow-sweater-sweatshirt-3d-vector-people-character-illustration-cartoon-minimal-style_365941-860.jpg",
     ],
     name: "moazzam",
-    _id: 1,
+    _id: "1",
     groupchat: false,
     members: ["1", "2"],
   },
@@ -13,7 +13,7 @@ export const sampledata = [
       "https://img.freepik.com/premium-vector/young-smiling-man-avatar-man-with-brown-beard-mustache-hair-wearing-yellow-sweater-sweatshirt-3d-vector-people-character-illustration-cartoon-minimal-style_365941-860.jpg",
     ],
     name: "moazzam",
-    _id: 2,
+    _id: "2",
     groupchat: false,
     members: ["1", "2"],
   },
@@ -22,8 +22,50 @@ export const sampledata = [
       "https://img.freepik.com/premium-vector/young-smiling-man-avatar-man-with-brown-beard-mustache-hair-wearing-yellow-sweater-sweatshirt-3d-vector-people-character-illustration-cartoon-minimal-style_365941-860.jpg",
     ],
     name: "moazzam",
-    _id: 3,
+    _id: "3",
     groupchat: false,
     members: ["1", "2"],
   },
 ];
+
+
+export const userdata=[{
+  avatar:   "https://img.freepik.com/premium-vector/young-smiling-man-avatar-man-with-brown-beard-mustache-hair-wearing-yellow-sweater-sweatshirt-3d-vector-people-character-illustration-cartoon-minimal-style_365941-860.jpg",
+  name: "moazzam",
+  _id: "1",
+},
+{
+  avatar:   "https://img.freepik.com/premium-vector/young-smiling-man-avatar-man-with-brown-beard-mustache-hair-wearing-yellow-sweater-sweatshirt-3d-vector-people-character-illustration-cartoon-minimal-style_365941-860.jpg",
+  name: "ali",
+  _id: "2",
+},
+{
+  avatar:   "https://img.freepik.com/premium-vector/young-smiling-man-avatar-man-with-brown-beard-mustache-hair-wearing-yellow-sweater-sweatshirt-3d-vector-people-character-illustration-cartoon-minimal-style_365941-860.jpg",
+  name: "hamza",
+  _id: "3",
+},
+]
+
+
+export const Samplenotifications=[{
+  sender:{
+    avatar:   "https://img.freepik.com/premium-vector/young-smiling-man-avatar-man-with-brown-beard-mustache-hair-wearing-yellow-sweater-sweatshirt-3d-vector-people-character-illustration-cartoon-minimal-style_365941-860.jpg",
+    name: "moazzam",
+  },
+  _id: "1",
+},
+{
+  sender:{
+    avatar:   "https://img.freepik.com/premium-vector/young-smiling-man-avatar-man-with-brown-beard-mustache-hair-wearing-yellow-sweater-sweatshirt-3d-vector-people-character-illustration-cartoon-minimal-style_365941-860.jpg",
+    name: "moazzam",
+  },
+  _id: "2",
+},
+{
+  sender:{
+    avatar:   "https://img.freepik.com/premium-vector/young-smiling-man-avatar-man-with-brown-beard-mustache-hair-wearing-yellow-sweater-sweatshirt-3d-vector-people-character-illustration-cartoon-minimal-style_365941-860.jpg",
+    name: "moazzam",
+  },
+  _id: "3",
+},
+]

@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { Link as LinkComponent } from "react-router-dom";
+import { Grey } from "../Components/Constant/Colors";
 
 
 export const Visuallyhidden = styled("input")({
@@ -14,11 +15,21 @@ export const Visuallyhidden = styled("input")({
     width: 1,
 })
 
-export const Link = styled(LinkComponent)`
-  textDecoration:"none";
-  color:"black";
-  padding:"1rem";
-  &:hover{
-    background-color:#F0F0F0;
-  }`
+export const Link = styled(LinkComponent)({
+    textDecoration: "none",
+    color: "black",
+    padding: "1rem",
+    '&:hover': {
+      backgroundColor: "rgb(0,0,0,0.1)",
+    }
+  });
 
+  export const InputBox= styled("input")({
+width:"100%",
+height:"100%",
+border:"none",
+outline:"none",
+borderRadius:"1.5rem",
+padding:"0 3rem",
+backgroundColor:Grey,
+  })

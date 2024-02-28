@@ -18,7 +18,7 @@ const App = () => {
 <Router>
 <Suspense fallback={<Loader/>}>
 <Routes>
-    <Route path='/login' element={<Protectedroute user={!user} redirect='/' > 
+    <Route path='/login' element={<Protectedroute user={!user} redirect='/login' > 
       <Login/>
     </Protectedroute> 
       }/>
