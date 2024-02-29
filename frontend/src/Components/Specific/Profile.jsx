@@ -13,7 +13,7 @@ const Profile = () => {
         border:"4px solid white",
         objectFit:"contain"
 
-    }} />
+    }}  src='https://img.freepik.com/premium-vector/young-smiling-man-avatar-man-with-brown-beard-mustache-hair-wearing-yellow-sweater-sweatshirt-3d-vector-people-character-illustration-cartoon-minimal-style_365941-860.jpg' />
     <Profilecard heading={"BIO"} text={"sahfjhfkjha"} />
     <Profilecard heading={"Username"} text={"Moazzambaig23"} Icon={<AlternateEmail/>} />
     <Profilecard heading={"Name"} text={"Moazzam Baig"}  Icon={<Face/>} />
