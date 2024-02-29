@@ -4,7 +4,7 @@ import { Box, Stack, Typography } from "@mui/material";
 import Avatarcard from "./Avatarcard";
 
 const ChstItem = ({
-  avator = [],
+  avatar = [],
   name,
   _id,
   sameSender,
@@ -30,10 +30,10 @@ const ChstItem = ({
           backgroundColor: sameSender ? "black" : "unset",
           color: sameSender ? "white" : "unset",
           padding: "1rem",
-          position: "relative",
+          position: "relative"
         }}
       >
-        <Avatarcard avatar={avator} />
+        <Avatarcard avatar={avatar} />
         <Stack>
           <Typography>{name}</Typography>
           {newmessage && (

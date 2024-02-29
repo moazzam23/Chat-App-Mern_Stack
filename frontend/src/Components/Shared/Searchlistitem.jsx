@@ -1,10 +1,12 @@
 import { Add, Remove } from "@mui/icons-material";
 import { Avatar, IconButton, ListItem, Stack, Typography } from "@mui/material";
 import React, { memo } from "react";
-import { ImageTransformation } from "../../Lib/Feature";
 
-const Searchlistitem = ({ user, handler, isLoading ,isAdded=false }) => {
+const Searchlistitem = ({ user, handler, isLoading ,isAdded=false, styling={} }) => {
   const { name, avatar, _id } = user;
+
+  const avatar2 = typeof avatar === 'string' ? avatar : Array.isArray(avatar) ? avatar[0] : '';
+
   return (
     <ListItem>
       <Stack
@@ -12,8 +14,9 @@ const Searchlistitem = ({ user, handler, isLoading ,isAdded=false }) => {
         width={"100%"}
         spacing={"1rem"}
         alignItems={"center"}
+        { ...styling }
       >
-        <Avatar src={ImageTransformation(avatar)} alt="pic" />
+        <Avatar src={avatar2} alt="pic" />
         <Typography
           variant="body1"
           sx={{

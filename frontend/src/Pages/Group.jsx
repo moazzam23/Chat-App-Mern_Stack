@@ -26,6 +26,7 @@ import { Link } from "../Style/Stylecomponent";
 import Avatarcard from "../Components/Shared/Avatarcard";
 import { sampledata } from "../Components/Constant/Sampledata";
 import MemberDialog from "../Components/Specific/MemberDialog";
+import Searchlistitem from "../Components/Shared/Searchlistitem";
 
 const DeleteDialogue = lazy(() =>
   import("../Components/Specific/DeleteDialogue")
@@ -78,12 +79,15 @@ const Group = () => {
   );
 
   useEffect(() => {
+   if(chatId){
     setGroupname(`group name ${chatId}`);
     setGroupnameupdate(`group name ${chatId}`);
+   }
 
     return () => {
       setGroupname("");
       setGroupnameupdate("");
+      setIsEdit(false)
     };
   }, [chatId]);
 
@@ -101,6 +105,8 @@ const Group = () => {
   const handleupdatename = () => {
     setIsEdit(false);
   };
+
+  const RemoveMemberhandler = ()=>{}
 
   const GroupName = (
     <Stack
@@ -207,8 +213,9 @@ const Group = () => {
         }}
       >
         {Iconbtn}
+          {groupname &&( 
         <>
-          {groupname && GroupName}
+            {GroupName}
           <Typography
             sx={{
               alignSelf: "flex-start",
@@ -228,16 +235,31 @@ const Group = () => {
               padding: {
                 sm: "1rem",
                 xs: "0",
-                md: "1rem 4rem",
+                md: "1rem 2rem",
               },
               spacing: "2rem",
-              bgcolor: pink,
+              // bgcolor: pink,
               height: "50vh",
               overflow: "auto",
             }}
-          ></Stack>
+          >
+            {sampledata.map((item) => (
+              <Searchlistitem
+                user={item}
+                key={item._id}
+                isAdded
+                styling={{
+                  boxShadow: "0 0 0.5rem rgba(0,0,0,0.2)",
+                  padding: "1rem 2rem",
+                  borderRadius: "2rem",
+                }}
+                handler={RemoveMemberhandler}
+              />
+            ))}
+          </Stack>
           {ButtonGroup}
         </>
+          )}
       </Grid>
 
       {isMember && (
@@ -271,7 +293,7 @@ const Group = () => {
 };
 
 const GroupList = ({ w = "100%", myGroups = [], chatId }) => (
-  <Stack width={w}>
+  <Stack width={w} height={"100vh"} sx={{overflow:"auto"}} >
     {myGroups.length > 0 ? (
       myGroups.map((group) => (
         <GroupItem group={group} chatId={chatId} key={group._id} />
@@ -285,7 +307,7 @@ const GroupList = ({ w = "100%", myGroups = [], chatId }) => (
 );
 
 const GroupItem = memo(({ group, chatId }) => {
-  const { name, avator, _id } = group;
+  const { name, avatar, _id } = group;
 
   return (
     <Link
@@ -294,8 +316,8 @@ const GroupItem = memo(({ group, chatId }) => {
         if (chatId === _id) e.preventDefault();
       }}
     >
-      <Stack direction={"row"} spacing={"1rem"} alignItems={"center"}>
-        <Avatarcard avatar={avator} />
+      <Stack direction={"row"} spacing={"1rem"} alignItems={"center"}  >
+        <Avatarcard avatar={avatar} />
         <Typography>{name}</Typography>
       </Stack>
     </Link>

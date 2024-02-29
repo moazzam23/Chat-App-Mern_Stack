@@ -1,6 +1,6 @@
 export const sampledata = [
   {
-    avator: [
+    avatar: [
       "https://img.freepik.com/premium-vector/young-smiling-man-avatar-man-with-brown-beard-mustache-hair-wearing-yellow-sweater-sweatshirt-3d-vector-people-character-illustration-cartoon-minimal-style_365941-860.jpg",
     ],
     name: "moazzam",
@@ -9,7 +9,7 @@ export const sampledata = [
     members: ["1", "2"],
   },
   {
-    avator: [
+    avatar: [
       "https://img.freepik.com/premium-vector/young-smiling-man-avatar-man-with-brown-beard-mustache-hair-wearing-yellow-sweater-sweatshirt-3d-vector-people-character-illustration-cartoon-minimal-style_365941-860.jpg",
     ],
     name: "moazzam",
@@ -18,7 +18,7 @@ export const sampledata = [
     members: ["1", "2"],
   },
   {
-    avator: [
+    avatar: [
       "https://img.freepik.com/premium-vector/young-smiling-man-avatar-man-with-brown-beard-mustache-hair-wearing-yellow-sweater-sweatshirt-3d-vector-people-character-illustration-cartoon-minimal-style_365941-860.jpg",
     ],
     name: "moazzam",

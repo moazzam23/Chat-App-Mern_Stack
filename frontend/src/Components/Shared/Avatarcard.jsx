@@ -4,8 +4,8 @@ import { ImageTransformation } from "../../Lib/Feature";
 
 const Avatarcard = ({ avatar = [], max = 4 }) => {
   return (
-    <Stack position={"row"} spacing={0.5}>
-      <AvatarGroup max={max}>
+    <Stack position={"row"} spacing={0.5} >
+      <AvatarGroup max={max} sx={{position:"relative"}} >
         <Box width={"5rem"} height={"3rem"}>
           {avatar.map((item, index) => (
             <Avatar
