@@ -12,6 +12,9 @@ const Group = lazy(()=>import('./Pages/Group'))
 const Error = lazy(()=>import('./Pages/Error'))
 const AdminLogin = lazy(()=>import('./Pages/Admin/AdminLogin'))
 const Dashboard = lazy(()=>import('./Pages/Admin/Dashboard'))
+const ChatManagement = lazy(()=>import('./Pages/Admin/ChatManagement'))
+const GroupsManagement = lazy(()=>import('./Pages/Admin/GroupsManagement'))
+const UserManagement = lazy(()=>import('./Pages/Admin/UserManagement'))
 
 let user=true;
 
@@ -32,6 +35,9 @@ const App = () => {
 
 <Route path='/admin' element={<AdminLogin/>} />
 <Route path='/admin/dashboard' element={<Dashboard/>} />
+<Route path='/admin/chat' element={<ChatManagement/>} />
+<Route path='/admin/user' element={<UserManagement/>} />
+<Route path='/admin/group' element={<GroupsManagement/>} />
 
 <Route path='*' element={<Error/>}/>
 

@@ -1,9 +1,8 @@
 import { Box, Drawer, Grid, IconButton, Stack, Typography, styled } from "@mui/material";
 import React, { useState } from "react";
-import { pink } from "../Constant/Colors";
+import { Orange } from "../Constant/Colors";
 import { Close, Dashboard, ExitToApp, Group, Menu, Message, VerifiedUserRounded } from "@mui/icons-material";
-import { useLocation, Link as LinkComponent } from "react-router-dom";
-
+import { useLocation, Link as LinkComponent, Navigate } from "react-router-dom";
 
 export const Link = styled(LinkComponent)({
     textDecoration: "none",
@@ -32,7 +31,7 @@ export const Link = styled(LinkComponent)({
 },
 {
     name:'Message',
-    path:'/admin/message',
+    path:'/admin/chat',
     icon:<Message/>
 }
 ]
@@ -81,6 +80,7 @@ const Sidebar = ({w="100%"}) => {
          </Stack>
   );
 };
+const isAdmin= true;
 
 const AdminLayout = ({ children }) => {
 
@@ -88,19 +88,21 @@ const AdminLayout = ({ children }) => {
 
     const HandleMobile=()=> setIsMobile(!isMobile);
 
+if(!isAdmin) return <Navigate to={"/admin"} />
+
   return (
     <Grid container minHeight={"100vh"}>
     
-    <Box sx={{ display: { xs: "block", md: "none" },position:"fixed",right:"1rem",top:"0.5rem" }}>
+    <Box sx={{ display: { xs: "block", md: "none" },position:"fixed",right:"3.5rem",top:"1.2rem",color:"black" ,backgroundColor:"transparent"}}  >
               <IconButton onClick={HandleMobile} >
-                { isMobile ? <Close/> : <Menu/>  }
+                { isMobile ? <Close  sx={{fontSize:"2rem"}}/> : <Menu  sx={{fontSize:"2rem"}}/>  }
               </IconButton>
             </Box>
       <Grid item md={4} lg={3} sx={{ display: { xs: "none", md: "block" } }}>
         <Sidebar />
       </Grid>
 
-      <Grid item xs={12} md={8} lg={9} sx={{ bgcolor: pink }}>
+      <Grid item xs={12} md={8} lg={9} sx={{ bgcolor: Orange }}>
         {" "}
         {children}{" "}
       </Grid>
