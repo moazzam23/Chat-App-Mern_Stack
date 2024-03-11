@@ -1,7 +1,7 @@
 import mongoose from "mongoose"
 import JWT from "jsonwebtoken"
 
-const CookieOption={
+export const CookieOption={
     maxAge: 15 * 24 * 60 * 60 * 1000,
     sameSite:"none",
     secure:true,
