@@ -1,4 +1,4 @@
-import mongoose, { Schema, Types, models } from "mongoose";
+import mongoose, { Schema, Types } from "mongoose";
 
 const RequestSchema = new Schema(
   {
@@ -24,4 +24,4 @@ const RequestSchema = new Schema(
   }
 );
 
-export const Request = models.Request || mongoose.model("Request", RequestSchema);
+export const Request = mongoose.models.Request || mongoose.model("Request", RequestSchema);
